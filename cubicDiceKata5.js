@@ -3,7 +3,7 @@
 function rolldiceSumProb(arr, totalSides){
     let counter = 0;
     let test = [];    
-    if (arr>6**totalSides||arr<totalSides){return 0;}        
+    if (arr>6*totalSides||arr<totalSides){return 0;}        
     for (let j=1; j<7; j++){
         for (let k=1; k<7; k++){
             if (totalSides<3){
