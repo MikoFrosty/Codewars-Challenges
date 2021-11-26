@@ -18,10 +18,7 @@
 
 
 
-
-
-
-// Great example of using recursion to solve a simple dice problem.
+// Great example of using recursion to solve a simple dice problem. 
 // Study this in more detail at a later time.
 
 /*
