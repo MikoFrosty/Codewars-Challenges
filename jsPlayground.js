@@ -1,24 +1,35 @@
 // Javascript Playground //
 
+console.log("Test 1");
+
+const sum = (a, b) => {
+    return new Promise((resolve, reject) => {
+        a+b>10
+        ? resolve(a+b)
+        : reject();
+    });
+}
+
+console.log("Test 2");
+
+sum(4, 7)
+.then(value => {
+    console.log(value)
+})
+.catch((error) => {
+    console.error("There was an error")
+})
+.finally(() => {
+    console.log("Done")
+});
+
+console.log("Test 3");
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Great example of using recursion to solve a simple dice problem. 
+// Great example of using recursion to solve a simple dice problem.
 // Study this in more detail at a later time.
 
 /*

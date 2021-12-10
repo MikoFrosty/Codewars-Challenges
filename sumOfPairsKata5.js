@@ -7,6 +7,8 @@ function sumPairs(ints, s) {
     ints.sort((a,b) => a+b===s?a-b:1);
     console.log(ints);
     */
+    
+
     let nums = [];
     for (let i = 0; i < ints.length; i++) {
         if (ints[i] >= s && s > 0) { continue; }
@@ -18,15 +20,13 @@ function sumPairs(ints, s) {
             }
         }
     }
-
     return undefined;
-
 }
 
 
 
 
-//console.log(sumPairs([1, 4, 8, 7, 3, 15], 8), [1, 7], "Basic: [1, 4, 8, 7, 3, 15] should return [1, 7] for sum = 8");
+//console.log(sumPairs([1, 4, 8, 7, 3, 15], 8)); // Should be [1, 7]
 //console.log(sumPairs([1, -2, 3, 0, -6, 1], -6), [0, -6], "Negatives: [1, -2, 3, 0, -6, 1] should return [0, -6] for sum = -6");
 //console.log(sumPairs([20, -13, 40], -7), undefined, "No Match: [20, -13, 40] should return undefined for sum = -7");
 //console.log(sumPairs([1, 2, 3, 4, 1, 0], 2), [1, 1], "First Match From Left: [1, 2, 3, 4, 1, 0] should return [1, 1] for sum = 2");
