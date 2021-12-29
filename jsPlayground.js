@@ -1,29 +1,63 @@
 // Javascript Playground //
+import {weatherApiKey} from "./apikeys.js";
+import {fullName} from "./exporttest.js";
+import fetch from "node-fetch";
+import fs from "fs";
+//const fetch = require('node-fetch');
 
-console.log("Test 1");
 
-const sum = (a, b) => {
-    return new Promise((resolve, reject) => {
-        a+b>10
-        ? resolve(a+b)
-        : reject();
-    });
-}
+console.log(fullName)
 
-console.log("Test 2");
 
-sum(4, 7)
-.then(value => {
-    console.log(value)
+
+
+
+
+
+
+/* Weather API Test */
+/* https://www.weatherapi.com/docs/# */ 
+/*
+
+fetch(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=49635&days=3`)
+.then(response => {
+    if (!response.ok){throw Error(`Problem fetching data | Error code ${JSON.stringify(response)}`)}
+    return response.json()
 })
-.catch((error) => {
-    console.error("There was an error")
+.then(data => {
+    console.log(data.forecast.forecastday)
 })
-.finally(() => {
-    console.log("Done")
-});
+.catch(error => console.error(error))
+*/
 
-console.log("Test 3");
+
+
+
+
+
+
+
+/* Twitter fetch for a specific tweet
+fetch("https://api.twitter.com/2/tweets/1475088179237695490?expansions=attachments.media_keys&tweet.fields=created_at,author_id,lang,source,public_metrics,context_annotations,entities", {  
+    method: "GET",
+    //body: "",
+    headers: {
+    Authorization: "Bearer AAAAAAAAAAAAAAAAAAAAAHVSWwEAAAAAOn%2FFskPge8QQHXr3bnUS8BvpFQY%3DIL7o0vYJHC3sFQtBHnJqkSVwMoiEBtmJdFRZnrNyuNf0y4RUfF"
+  }
+})
+.then(response => response.json())
+.then(data => {
+    console.log(JSON.stringify(data))
+    //fs.writeFileSync("TweetTest.txt", JSON.stringify(data))
+})
+.catch(error => {
+    console.error(error)
+})
+*/
+
+
+
+
 
 
 
