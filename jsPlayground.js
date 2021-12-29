@@ -1,12 +1,10 @@
 // Javascript Playground //
 import {weatherApiKey} from "./apikeys.js";
-import {fullName} from "./exporttest.js";
 import fetch from "node-fetch";
 import fs from "fs";
 //const fetch = require('node-fetch');
 
 
-console.log(fullName)
 
 
 
