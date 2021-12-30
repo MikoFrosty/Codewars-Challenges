@@ -1,12 +1,9 @@
 // Javascript Playground //
-import {weatherApiKey} from "./apikeys.js";
-import fetch from "node-fetch";
+import FetchWrapper from "./FetchWrapper.js";
+import {weatherApiKey, twitterBearerToken} from "./apikeys.js";
+//import fetch from "node-fetch";
 import fs from "fs";
 //const fetch = require('node-fetch');
-
-
-
-
 
 
 
@@ -16,7 +13,14 @@ import fs from "fs";
 /* Weather API Test */
 /* https://www.weatherapi.com/docs/# */ 
 /*
+*/
+const API = new FetchWrapper('http://api.weatherapi.com/v1/');
 
+API.get(`forecast.json?key=${weatherApiKey}&q=49635&days=3`)
+.then(data => console.log(data.forecast.forecastday))
+.catch(error => console.error(error));
+
+/*
 fetch(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=49635&days=3`)
 .then(response => {
     if (!response.ok){throw Error(`Problem fetching data | Error code ${JSON.stringify(response)}`)}
@@ -40,7 +44,7 @@ fetch("https://api.twitter.com/2/tweets/1475088179237695490?expansions=attachmen
     method: "GET",
     //body: "",
     headers: {
-    Authorization: "Bearer AAAAAAAAAAAAAAAAAAAAAHVSWwEAAAAAOn%2FFskPge8QQHXr3bnUS8BvpFQY%3DIL7o0vYJHC3sFQtBHnJqkSVwMoiEBtmJdFRZnrNyuNf0y4RUfF"
+    Authorization: twitterBearerToken
   }
 })
 .then(response => response.json())
