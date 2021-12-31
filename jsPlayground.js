@@ -1,6 +1,6 @@
 // Javascript Playground //
-import FetchWrapper from "./FetchWrapper.js";
-import {weatherApiKey, twitterBearerToken} from "./apikeys.js";
+import FetchWrapper from "./modules/FetchWrapper.js";
+import {weatherApiKey, twitterBearerToken} from "./modules/apikeys.js";
 //import fetch from "node-fetch";
 import fs from "fs";
 //const fetch = require('node-fetch');
