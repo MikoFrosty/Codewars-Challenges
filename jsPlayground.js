@@ -1,5 +1,6 @@
 // Javascript Playground //
-import FetchWrapper from "./modules/FetchWrapper.js";
+//import FetchWrapper from "./modules/FetchWrapper.js";
+import FetchWrapperWeather from "./modules/FetchWrapperWeather.js";
 import {weatherApiKey, twitterBearerToken} from "./modules/apikeys.js";
 //import fetch from "node-fetch";
 import fs from "fs";
@@ -12,11 +13,11 @@ import fs from "fs";
 
 /* Weather API Test */
 /* https://www.weatherapi.com/docs/# */ 
-/*
+/* API.get(endpoint, parameters (inlude '&' before each))  e.g. API.get('forecast.json', '&q=49635&days=3')
 */
-const API = new FetchWrapper('http://api.weatherapi.com/v1/');
+const API = new FetchWrapperWeather('http://api.weatherapi.com/v1/', weatherApiKey);
 
-API.get(`forecast.json?key=${weatherApiKey}&q=49635&days=3`)
+API.get('forecast.json', '&q=49635&days=3')
 .then(data => console.log(data.forecast.forecastday))
 .catch(error => console.error(error));
 
