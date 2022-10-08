@@ -1,37 +1,30 @@
 // Javascript Playground //
-//import FetchWrapper from "./modules/FetchWrapper.js";
-import FetchWrapperWeather from "./modules/FetchWrapperWeather.js";
-import {weatherApiKey, twitterBearerToken} from "./modules/apikeys.js";
-//import fetch from "node-fetch";
-import fs from "fs";
-//const fetch = require('node-fetch');
 
 
 
 
 
 
-/* Weather API Test */
-/* https://www.weatherapi.com/docs/# */ 
-/* API.get(endpoint, parameters (inlude '&' before each))  e.g. API.get('forecast.json', '&q=49635&days=3')
-*/
-const API = new FetchWrapperWeather('http://api.weatherapi.com/v1/', weatherApiKey);
 
-API.get('forecast.json', '&q=49635&days=3')
-.then(data => console.log(data.forecast.forecastday))
-.catch(error => console.error(error));
 
-/*
-fetch(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=49635&days=3`)
-.then(response => {
-    if (!response.ok){throw Error(`Problem fetching data | Error code ${JSON.stringify(response)}`)}
-    return response.json()
-})
-.then(data => {
-    console.log(data.forecast.forecastday)
-})
-.catch(error => console.error(error))
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
